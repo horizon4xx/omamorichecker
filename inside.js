@@ -1,4 +1,4 @@
 function check(){
-let first = document.getElementById("daiit1").value
+let first = document.getElementById("dai1").value
 alert("Test")
 }
