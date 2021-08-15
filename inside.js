@@ -23,7 +23,7 @@ function skillcheck(skill){
                 case "mukizu:":
             return "無傷"
                     case "rengeki":
-            return "蓮撃"
+            return "連撃"
     }
     
 }
@@ -82,7 +82,7 @@ if (c == "反動" & d <= 7){
     return true
 }else if(c == "無傷" & d<=3){
     return true
-}else if(c == "蓮撃" & d<=3){
+}else if(c == "連撃" & d<=3){
     return true
 }else{
     return false
@@ -112,7 +112,7 @@ if (a == "納刀" & b <= 10){
     return true
 }else if(c == "無傷" & d<=5){
     return true
-}else if(c == "蓮撃" & d<=5){
+}else if(c == "連撃" & d<=5){
     return true
 }else{
     return false
