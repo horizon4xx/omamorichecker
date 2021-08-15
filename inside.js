@@ -22,6 +22,9 @@ function skillcheck(skill){
             return "攻撃"
                 case "mukizu:":
             return "無傷"
+                    case "rengeki":
+            return "蓮撃"
+    }
     }
 }
 
@@ -79,6 +82,8 @@ if (c == "反動" & d <= 7){
     return true
 }else if(c == "無傷" & d<=3){
     return true
+}else if(c == "蓮撃" & d<=3){
+    return true
 }else{
     return false
 }
@@ -106,6 +111,8 @@ if (a == "納刀" & b <= 10){
 }else if(a == "逆上" & b <= 6){
     return true
 }else if(c == "無傷" & d<=5){
+    return true
+}else if(c == "蓮撃" & d<=5){
     return true
 }else{
     return false
@@ -434,7 +441,58 @@ function nanhuru(skillone,skillnumone,skilltwo,skillnumtwo,slot){
     }
 }
 
+function sanren(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "貫通弾強化"){
+        if (c == "会心強化"){
+            if (e >= 3 & b >= 6 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if(a == "連撃"){
+        if (c == "貫通強化"){
+            if (e >= 3 & b >= 4 & d >= 3){
+                return true
+            }else if (e >= 3 & b >= 5 & d >= 2){
+                return true
+            }else{
+                return false
+            }
+        }else if (c == "射法"){
+            if (e >= 3 & b >= 4 & d >=4){
+                return true
+            }else if (e >= 3 & b >= 5 & d >= 3){
+                return true
+            }else{
+                return false
+            }
+        }else if (c == "達人"){
+            if (e >= 3 & b >=4& d >= 10){
+                return true
+            }else if (e >= 3 & b >= 5 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }else if (c == "会心強化"){
+            if (e >= 3 & b >= 4 & d >= 5){
+                return true
+            }else if (e >= 3 & b >= 5 & d >= 4){
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+}
 
 
 function noutoutokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
@@ -592,6 +650,7 @@ function check(){
         document.getElementById("nousaka").style.color = "black"
     document.getElementById("nouten").style.color = "black"
     document.getElementById("nanhuru").style.color = "black"
+    document.getElementById("sanren").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -620,5 +679,8 @@ function check(){
     }
         if (nanhuru(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("nanhuru").style.color = "red"
+    }
+        if (sanren(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("sanren").style.color = "red"
     }
 }
