@@ -139,8 +139,87 @@ function mikiri1tokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
     }
 }
 
+function nanpuutokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
+
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "炎熱適応"){
+        if (c == "貫通強化"){
+            if (e >= 3 & b >= 7 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "達人"){
+            if (e >= 3 & b >= 7 & d >= 9){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "痛撃"){
+            if (e >= 2 & b >= 7 & d >= 5){
+                return true
+            }else if (e >= 3 & b >= 6 & d >= 4){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if (e >= 2 & b >= 7 & d >= 5){
+                return true
+            }else if (e >= 3 & b >= 5 & d >= 5){
+                return true
+            }else if (e >= 3 & b >= 6 & d >= 4){
+                return true
+            }else if (e >= 3 & b >= 7 & d >= 3){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if (a == "貫通強化"){
+        if (c == "達人"){
+            if (e >= 3 & b >= 6 & d >= 10){
+                return true
+            }else{
+                return false
+            }
+        }else if (c == "会心強化"){
+            if (e >= 3 & b >= 6 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if (a=="痛撃"){
+        if (c == "達人"){
+            if (e >= 3 & b >= 5 & d >= 9){
+                return true
+            }else if (e >= 3 & b >= 6 & d >= 8){
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
 function check(){
     document.getElementById("mikiri1tokusha").style.color = "black"
+    document.getElementById("nanpuutokusha").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -149,5 +228,8 @@ function check(){
     document.getElementById("omamori").innerHTML = (skill1+skillnum1+","+skill2+skillnum2+",s"+slot)
     if (mikiri1tokusha(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("mikiri1tokusha").style.color = "red"
+    }
+    if (nanpuutokusha(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("nanpuutokusha").style.color = "red"
     }
 }
