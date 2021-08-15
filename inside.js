@@ -110,9 +110,9 @@ if (a == "納刀" & b <= 10){
     return true
 }else if(a == "逆上" & b <= 6){
     return true
-}else if(c == "無傷" & d<=5){
+}else if(a == "無傷" & d<=5){
     return true
-}else if(c == "連撃" & d<=5){
+}else if(a == "連撃" & d<=5){
     return true
 }else{
     return false
