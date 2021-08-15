@@ -253,6 +253,51 @@ function mikiri1tokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
     }
 }
 
+function shousaka(skillone,skillnumone,skilltwo,skillnumtwo,slot){
+
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "貫通強化"){
+        if (c == "攻撃"){
+            if (e >=3&b>=3&d>=10){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if(a == "痛撃"){
+            if(c == "攻撃"){
+                if (e >=3&b>=4&d>=10){
+                    return true
+                }else if (e >=3&b>=6&d>=6){
+                    return true
+                }else{
+                    return false
+                }
+            }else if (c == "達人"){
+                if (e >=3&b>=6&d>=9){
+                    return true
+                }else{
+                    return false
+                }
+            }
+    }else if (a == "逆上"){
+        if (c == "攻撃"){
+            if (e >=3&b>=4&d>=10){
+                return true
+            }else if (e >=3&b>=6&d>=7){
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+}
+
 function nanpuutokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
     let a = skillone
@@ -651,6 +696,7 @@ function check(){
     document.getElementById("nouten").style.color = "black"
     document.getElementById("nanhuru").style.color = "black"
     document.getElementById("sanren").style.color = "black"
+    document.getElementById("shousaka").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -681,6 +727,10 @@ function check(){
         document.getElementById("nanhuru").style.color = "red"
     }
         if (sanren(skill1,skillnum1,skill2,skillnum2,slot)){
-        document.getElementById("sanren").style.color = "red"
+        document.getElementById("nanhuru").style.color = "red"
     }
+    if (shousaka(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("shousaka").style.color = "red"
+    }
+    
 }
