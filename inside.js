@@ -56,6 +56,65 @@ switch (number){
 }
 }
 
+function exist2(skilltwo,skillnumtwo,slot){
+    let c = skilltwo
+    let d = skillnumone
+if (c == "反動" & d <= 7){
+    return true
+}else if(c == "納刀" & d <= 7){
+    return true
+}else if(c == "貫通強化" & d<=5){
+    return true
+}else if(c == "射法" & d<=5){
+    return true
+}else if(c == "達人" & d<= 10){
+    return true
+}else if(c == "痛撃" & d<= 5){
+    return true
+}else if(c == "会心強化" & d<=5){
+    return true
+}else if(c == "逆上" & d<=5){
+    return true
+}else{
+    return false
+}
+}
+
+
+function exist1(skillone,skillnumone){
+let a = skillone
+let b = skillnumone
+
+
+
+if (a == "納刀" & b <= 7){
+    return true
+}else if (a == "反動" & b <= 6){
+    return true
+}else if (a == "貫通強化" & b <= 6){
+    return true
+}else if(a == "射法" & b <= 5){
+    return true
+}else if(a == "痛撃" & b <= 6){
+    return true
+}else if(a == "炎熱適応" & b <= 7){
+    return true
+}else if(a == "逆上" & b <= 6){
+    return true
+}else{
+    return false
+}
+
+
+
+
+
+}
+
+
+
+
+
 function mikiri1tokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
     let a = skillone
@@ -368,6 +427,9 @@ function check(){
     let skill2 = skillcheck(document.getElementById("dai2").value)
     let skillnum2 = numcheck(document.getElementById("num2").value)
     let slot = numcheck(document.getElementById("slot").value)
+    if (!exist1(skill1,skillnum1) || !exist2(skill2,skillnum2)){
+        alert("存在しないお守りです。")
+    }
     document.getElementById("omamori").innerHTML = (skill1+skillnum1+","+skill2+skillnum2+",s"+slot)
     if (mikiri1tokusha(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("mikiri1tokusha").style.color = "red"
