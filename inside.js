@@ -524,6 +524,8 @@ function check(){
     let slot = numcheck(document.getElementById("slot").value)
     if (!exist1(skill1,skillnum1) || !exist2(skill2,skillnum2)){
         alert("存在しないお守りです。")
+    }else if (skill1 == skill2){
+        alert("存在しないお守りです。")
     }
     document.getElementById("omamori").innerHTML = (skill1+skillnum1+","+skill2+skillnum2+",s"+slot)
     if (mikiri1tokusha(skill1,skillnum1,skill2,skillnum2,slot)){
