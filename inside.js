@@ -140,6 +140,7 @@ function mikiri1tokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 }
 
 function check(){
+    document.getElementById("mikiri1tokusha").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
