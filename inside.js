@@ -125,6 +125,120 @@ if (a == "納刀" & b <= 10){
 }
 
 
+function shoutoku(skillone,skillnumone,skilltwo,skillnumtwo,slot){
+
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "貫通強化"){
+        if (c == "攻撃"){
+            if(e>=2 & b>=3 & d >=10){
+                return true
+            }else if(e>=3 & b>=1 & d >=10){
+                return true
+            }else if(e>=3 & b>=2 & d >=7){
+                return true
+            }else if(e>=3 & b>=3 & d >=6){
+                return true
+            }else if(e>=3 & b>=6 & d >=4){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "達人"){
+            if(e>=3 & b>=3 & d >=9){
+                return true
+            }else if(e>=3 & b>=6 & d >=8){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "痛撃"){
+            if(e>=3 & b>=3& d >=5){
+                return true
+            }else if(e>=3 & b>=6 & d >=3){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if(e>=3 & b>=3 & d >=5){
+                return true
+            }else if(e>=3 & b>=6 & d >=2){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if (a == "痛撃"){
+        if (c == "攻撃"){
+            if(e>=1 & b>=4 & d >=10){
+                return true
+            }else if(e>=1 & b>=6 & d >=6){
+                return true
+            }else if(e>=2 & b>=3 & d >=10){
+                return true
+            }else if(e>=2 & b>=4 & d >=7){
+                return true
+            }else if(e>=2 & b>=5 & d >=6){
+                return true
+            }else if(e>=2 & b>=6 & d >=5){
+                return true
+            }else if(e>=3 & b>=2 & d >=10){
+                return true
+            }else if(e>=3 & b>=3 & d >=7){
+                return true
+            }else if(e>=3 & b>=4 & d >=6){
+                return true
+            }else if(e>=3 & b>=5 & d >=5){
+                return true
+            }else if(e>=3 & b>=6 & d >=3){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "貫通強化"){
+            if(e>=2 & b>=6 & d >=3){
+                return true
+            }else if(e>=3 & b>=6 & d >=2){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "達人"){
+            if(e>=1 & b>=6 & d >=9){
+                return true
+            }else if(e>=2 & b>=5 & d >=9){
+                return true
+            }else if(e>=2 & b>=6 & d >=8){
+                return true
+            }else if(e>=3 & b>=3 & d >=10){
+                return true
+            }else if(e>=3 & b>=4 & d >=9){
+                return true
+            }else if(e>=3 & b>=5 & d >=8){
+                return true
+            }else if(e>=3 & b>=6 & d >=5){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if(e>=2 & b>=6 & d >=2){
+                return true
+            }else if(e>=3 & b>=5 & d >=2){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else{
+        return false
+    }
+}
 
 function nousaka(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
@@ -166,7 +280,9 @@ function nousaka(skillone,skillnumone,skilltwo,skillnumtwo,slot){
                 return false
             }
         }
-    }
+    }else{
+                return false
+            }
 
 }
 
@@ -250,7 +366,9 @@ function mikiri1tokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
                 return false
             }
         }
-    }
+    }else{
+                return false
+            }
 }
 
 function shousaka(skillone,skillnumone,skilltwo,skillnumtwo,slot){
@@ -295,7 +413,9 @@ function shousaka(skillone,skillnumone,skilltwo,skillnumtwo,slot){
                 return false
             }
         }
-    }
+    }else{
+                return false
+            }
 }
 
 function nanpuutokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
@@ -416,7 +536,9 @@ function nouten(skillone,skillnumone,skilltwo,skillnumtwo,slot){
                 return false
             }
         }
-    }
+    }else{
+                return false
+            }
 }
 
 
@@ -483,7 +605,9 @@ function nanhuru(skillone,skillnumone,skilltwo,skillnumtwo,slot){
                 return false
             }
         }
-    }
+    }else{
+                return false
+            }
 }
 
 function sanren(skillone,skillnumone,skilltwo,skillnumtwo,slot){
@@ -536,7 +660,9 @@ function sanren(skillone,skillnumone,skilltwo,skillnumtwo,slot){
                 return false
             }
         }
-    }
+    }else{
+                return false
+            }
 }
 
 
@@ -697,6 +823,7 @@ function check(){
     document.getElementById("nanhuru").style.color = "black"
     document.getElementById("sanren").style.color = "black"
     document.getElementById("shousaka").style.color = "black"
+    document.getElementById("shoutoku").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -731,6 +858,9 @@ function check(){
     }
     if (shousaka(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("shousaka").style.color = "red"
+    }
+        if (shoutoku(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("shoutoku").style.color = "red"
     }
     
 }
