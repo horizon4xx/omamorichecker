@@ -1,3 +1,3 @@
-document.getElementById("checker").onclick() = function(){
-alert("test")
+function check(){
+alert("Test")
 }
