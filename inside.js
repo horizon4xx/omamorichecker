@@ -25,7 +25,7 @@ function skillcheck(skill){
                     case "rengeki":
             return "蓮撃"
     }
-    }
+    
 }
 
 function numcheck(number){
