@@ -20,7 +20,7 @@ function skillcheck(skill){
             return "会心強化"
         case "kougeki":
             return "攻撃"
-                case "mukizu:":
+                case "mukizu":
             return "無傷"
                     case "rengeki":
             return "連撃"
