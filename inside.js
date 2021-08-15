@@ -20,6 +20,8 @@ function skillcheck(skill){
             return "会心強化"
         case "kougeki":
             return "攻撃"
+                case "mukizu:":
+            return "無傷"
     }
 }
 
@@ -75,6 +77,8 @@ if (c == "反動" & d <= 7){
     return true
 }else if(c == "逆上" & d<=5){
     return true
+}else if(c == "無傷" & d<=3){
+    return true
 }else{
     return false
 }
@@ -100,6 +104,8 @@ if (a == "納刀" & b <= 10){
 }else if(a == "炎熱適応" & b <= 7){
     return true
 }else if(a == "逆上" & b <= 6){
+    return true
+}else if(c == "無傷" & d<=5){
     return true
 }else{
     return false
@@ -363,6 +369,74 @@ function nouten(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
 
 
+function nanhuru(skillone,skillnumone,skilltwo,skillnumtwo,slot){
+
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "炎熱適応"){
+        if (c == "達人"){
+            if (e >= 2 & b >= 7 & d >=10){
+                return true
+            }else if (e >= 3 & b >= 6 & d >=10){
+                return true
+            }else if (e >= 3 & b >= 7 & d >=8){
+                return true
+            }else{
+                return false
+            }
+        }else if (c == "会心強化"){
+            if (e >= 3 & b >= 7 & d >=5){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if (a == "貫通強化"){
+        if (c == "達人"){
+            if (e >= 3 & b >= 3 & d >=10){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if(a == "痛撃"){
+        if (c == "貫通強化"){
+            if (e >= 3 & b >= 6 & d >=3){
+                return true
+            }else{
+                return false
+            }
+        }else if (c == "達人"){
+            if (e >= 2 & b >= 5 & d >=10){
+                return true
+            }else if (e >= 3 & b >= 4 & d >=10){
+                return true
+            }else if (e >= 3 & b >= 5 & d >=9){
+                return true
+            }else if (e >= 3 & b >= 6 & d >=6){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if(a == "無傷"){
+        if (c == "達人"){
+            if (e >= 3 & b >= 4 & d >=10){
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+}
+
+
+
+
 function noutoutokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
     let a = skillone
@@ -517,6 +591,7 @@ function check(){
     document.getElementById("noutoku").style.color = "black"
         document.getElementById("nousaka").style.color = "black"
     document.getElementById("nouten").style.color = "black"
+    document.getElementById("nanhuru").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -542,5 +617,8 @@ function check(){
     }
         if (nouten(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("nouten").style.color = "red"
+    }
+        if (nanhuru(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("nanhuru").style.color = "red"
     }
 }
