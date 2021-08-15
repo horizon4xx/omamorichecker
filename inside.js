@@ -113,7 +113,49 @@ if (a == "納刀" & b <= 10){
 
 
 
+function nousaka(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "納刀"){
+        if (c == "貫通強化"){
+            if (e >= 3 & b >= 10 & d >= 3){
+                return true
+            }
+        }else if(c == "達人"){
+            if (e >= 3 & b >= 10 & d >=9){
+                return true
+            }
+        }else if(c == "痛撃"){
+            if (e >= 2 & b >= 10 & d >=5){
+                return true
+            }else if (e >= 3 & b >= 9 & d >=5){
+                return true
+            }else if (e >= 3 & b >= 10 & d >=4){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if (e >= 3 & b >= 10 & d >=5){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "逆上"){
+            if (e >= 3 & b >= 10 & d >=4){
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+
+}
 
 function mikiri1tokusha(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
@@ -422,6 +464,7 @@ function check(){
     document.getElementById("mikiri1tokusha").style.color = "black"
     document.getElementById("nanpuutokusha").style.color = "black"
     document.getElementById("noutoku").style.color = "black"
+        document.getElementById("nousaka").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -439,5 +482,8 @@ function check(){
     }
     if (noutoutokusha(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("noutoku").style.color = "red"
+    }
+    if (nousaka(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("nousaka").style.color = "red"
     }
 }
