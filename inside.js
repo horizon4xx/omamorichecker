@@ -58,7 +58,7 @@ switch (number){
 
 function exist2(skilltwo,skillnumtwo,slot){
     let c = skilltwo
-    let d = skillnumone
+    let d = skillnumtwo
 if (c == "反動" & d <= 7){
     return true
 }else if(c == "納刀" & d <= 7){
@@ -87,7 +87,7 @@ let b = skillnumone
 
 
 
-if (a == "納刀" & b <= 7){
+if (a == "納刀" & b <= 10){
     return true
 }else if (a == "反動" & b <= 6){
     return true
