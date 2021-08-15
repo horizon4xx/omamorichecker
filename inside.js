@@ -854,7 +854,7 @@ function check(){
         document.getElementById("nanhuru").style.color = "red"
     }
         if (sanren(skill1,skillnum1,skill2,skillnum2,slot)){
-        document.getElementById(").style.color = "red"
+        document.getElementById("sanren").style.color = "red"
     }
     if (shousaka(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("shousaka").style.color = "red"
