@@ -84,6 +84,8 @@ if (c == "反動" & d <= 7){
     return true
 }else if(c == "連撃" & d<=3){
     return true
+}else if(c == "攻撃" & d<=10){
+    return true
 }else{
     return false
 }
