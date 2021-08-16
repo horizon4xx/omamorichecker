@@ -971,3 +971,164 @@ function check(){
         document.getElementById("noutoudandou").style.color = "red"
     }
 }
+
+function mikiri1tokushas(){
+        document.getElementById("tenpureskill").innerHTML = `
+        <br>
+        見切り１特射<br><br>
+        
+        ガオウ＝クオバルデ<br><br>
+
+        貫通弾・貫通矢UP<br>
+        弾導強化<br>
+        特定射撃強化<br>
+        見切り+1<br>
+        弱点特効<br>
+        超会心<br>
+        `
+}
+
+function nanpuutokushas(){
+    document.getElementById("tenpureskill").innerHTML = `
+
+<br>
+南風特射<br><br>
+
+ガオウ＝クオバルデ<br><br>
+南風の狩人<br>
+貫通弾・貫通矢UP<br>
+特定射撃強化<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+`
+}
+
+function noutokus(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+納刀特射<br><br>
+
+ガオウ＝クオバルデ<br><br>
+    
+    納刀術<br>
+貫通弾・貫通矢UP<br>
+特定射撃強化<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+`
+}
+
+function noutoudandous(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+納刀弾道<br><br>
+
+ガオウ＝クオバルデ<br><br>
+    
+納刀術<br>
+弾導強化<br>
+特定射撃強化<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+`
+}
+
+function nousakas(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+納刀逆恨み<br><br>
+
+ガオウ＝クオバルデ<br><br>
+納刀術<br>
+貫通弾・貫通矢UP<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+逆恨み<br>
+`
+}
+
+function noutens(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+2弱納刀<br><br>
+
+ガオウ＝クオバルデ<br><br>
+納刀術<br>
+貫通弾・貫通矢UP<br>
+弾導強化<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+`
+}
+
+function nanhurus(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+    南風フルチャージ<br><br>
+
+ガオウ＝クオバルデ<br><br>
+南風の狩人<br>
+貫通弾・貫通矢UP<br>
+見切り+1<br>
+弱点特効<br>
+超会心<br>
+フルチャージ<br>
+`
+}
+
+function sanrens(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+    見切り3連撃<br><br>
+
+ガオウ＝クオバルデ<br><br>
+貫通弾・貫通矢UP<br>
+弾導強化<br>
+見切り+3<br>
+連撃の心得<br>
+超会心<br><br>
+`
+}
+
+function shousakas(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+    小逆恨み<br><br>
+
+ガオウ＝クオバルデ<br><br>
+攻撃力UP【小】<br>
+貫通弾・貫通矢UP<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+逆恨み<br>
+`
+}
+
+function shoutokus(){
+    document.getElementById("tenpureskill").innerHTML = `
+    
+    <br>
+    攻撃小特射<br><br>
+
+ガオウ＝クオバルデ<br><br>
+攻撃力UP【小】<br>
+貫通弾・貫通矢UP<br>
+特定射撃強化<br>
+見切り+2<br>
+弱点特効<br>
+超会心<br>
+`
+}
