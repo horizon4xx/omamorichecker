@@ -126,6 +126,108 @@ if (a == "納刀" & b <= 10){
 
 }
 
+function noutoudandou(skillone,skillnumone,skilltwo,skillnumtwo,slot){
+
+    let a = skillone
+    let b = skillnumone
+    let c = skilltwo
+    let d = skillnumtwo
+    let e = slot
+
+    if (a == "納刀"){
+        if (c == "射法"){
+            if(e >= 2 & b >= 10 & d >= 4){
+                return true
+            }else if(e >= 3 & b >= 9 & d >= 4){
+                return true
+            }else if(e >= 3 & b >= 10 & d >= 3){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "達人"){
+            if(e >= 3 & b >= 5 & d >= 10){
+                return true
+            }else if(e >= 3 & b >= 9 & d >= 9){
+                return true
+            }else if(e >= 3 & b >= 10 & d >= 6){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "痛撃"){
+            if(e >= 1 & b >= 10 & d >= 5){
+                return true
+            }else if(e >= 2 & b >= 9 & d >= 5){
+                return true
+            }else if(e >= 2 & b >= 10 & d >= 4){
+                return true
+            }else if(e >= 3 & b >= 7 & d >= 5){
+                return true
+            }else if(e >= 3 & b >= 9 & d >= 4){
+                return true
+            }else if(e >= 3 & b >= 10 & d >= 2){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if(e >= 2 & b >= 10 & d >= 5){
+                return true
+            }else if(e >= 3 & b >= 5 & d >= 5){
+                return true
+            }else if(e >= 3 & b >= 9 & d >= 4){
+                return true
+            }else if(e >= 3 & b >= 10 & d >= 2){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if(a == "射法"){
+        if (c == "達人"){
+            if(e >= 3 & b >=4 & d >= 10){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if(e >= 3 & b >= 4 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else if(a == "痛撃"){
+        if(c == "納刀"){
+            if(e >= 3 & b >= 6 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "射法"){
+            if(e >= 3 & b >= 6 & d >= 4){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "達人"){
+            if(e >= 3 & b >= 6 & d >= 9){
+                return true
+            }else{
+                return false
+            }
+        }else if(c == "会心強化"){
+            if(e >= 3 & b >= 6 & d >= 5){
+                return true
+            }else{
+                return false
+            }
+        }
+    }else{
+        return false
+    }
+}
 
 function shoutoku(skillone,skillnumone,skilltwo,skillnumtwo,slot){
 
@@ -826,6 +928,7 @@ function check(){
     document.getElementById("sanren").style.color = "black"
     document.getElementById("shousaka").style.color = "black"
     document.getElementById("shoutoku").style.color = "black"
+    document.getElementById("noutoudandou").style.color = "black"
     let skill1 = skillcheck(document.getElementById("dai1").value)
     let skillnum1 = numcheck(document.getElementById("num1").value)
     let skill2 = skillcheck(document.getElementById("dai2").value)
@@ -864,5 +967,7 @@ function check(){
         if (shoutoku(skill1,skillnum1,skill2,skillnum2,slot)){
         document.getElementById("shoutoku").style.color = "red"
     }
-    
+        if (noutoudandou(skill1,skillnum1,skill2,skillnum2,slot)){
+        document.getElementById("noutoudandou").style.color = "red"
+    }
 }
